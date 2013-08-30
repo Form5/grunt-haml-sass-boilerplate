@@ -1,14 +1,6 @@
 module.exports = function(grunt) {
   grunt.initConfig({
 
-    connect: {
-      server: {
-        options: {
-          port: 1337,
-          base: 'dist',
-        }
-      }
-    },
 
     rubyHaml: {
       dist: {
@@ -31,24 +23,35 @@ module.exports = function(grunt) {
     watch: {
       haml: {
         files: ['views/**/*.haml'],
-        tasks: ['rubyHaml'],
-        options: {
-          livereload: true
-        }
+        tasks: ['rubyHaml']
       },
       sass: {
         files: ['assets/stylesheets/**/*.scss'],
-        tasks: ['sass'],
+        tasks: ['sass']
+      },
+      dist: {
+        files: ['dist/assets/stylesheets/**/*.css', 'dist/**/*.html'],
         options: {
           livereload: true
         }
       }
+    },
+
+    connect: {
+      server: {
+        options: {
+          port: 1337,
+          base: 'dist'
+        }
+      }
     }
+
   });
 
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.task.loadNpmTasks('grunt-ruby-haml');
   grunt.task.loadNpmTasks('grunt-sass');
+
   grunt.loadNpmTasks('grunt-contrib-connect');
 
   grunt.registerTask('default', ['rubyHaml', 'sass'])
