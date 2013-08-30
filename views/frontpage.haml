@@ -1,0 +1,6 @@
+!!! 5
+%html.no-js
+  = Haml::Engine.new(File.read(File.expand_path File.dirname(__FILE__) + '/shared/head.haml')).render
+  %body
+    %h1 Test
+    = Haml::Engine.new(File.read(File.expand_path File.dirname(__FILE__) + '/shared/javascript.haml')).render
