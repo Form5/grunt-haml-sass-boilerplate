@@ -6,7 +6,6 @@ module.exports = function(grunt) {
         options: {
           port: 1337,
           base: 'dist',
-          keepalive: true
         }
       }
     },
@@ -53,6 +52,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-connect');
 
   grunt.registerTask('default', ['rubyHaml', 'sass'])
+  grunt.registerTask('server', ['connect', 'watch'])
 
 }
 
