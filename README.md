@@ -12,9 +12,11 @@ This is a development environment that we used on a couple of projects where Ham
 
 ## Usage
 
-    $ git clone https://github.com/Form5/grunt-haml-sass-boilerplate.git
-    $ npm install
-    $ grunt server
+```
+$ git clone https://github.com/Form5/grunt-haml-sass-boilerplate.git
+$ npm install
+$ grunt server
+```
 
 ## Directory structure
 
@@ -23,27 +25,29 @@ This is a development environment that we used on a couple of projects where Ham
 - Images are automatically minified and copied
 - Coffeescript is automatically compiled and copied
 
-    ├── Gruntfile.coffee
-    ├── LICENSE
-    ├── Package.json
-    ├── README.md
-    ├── assets
-    │   ├── images
-    │   ├── javascript
-    │   └── stylesheets
-    │       ├── main.scss
-    │       └── vendor
-    ├── dist
-    │   ├── assets
-    │   │   ├── images
-    │   │   └── stylesheets
-    │   │       └── main.css
-    │   └── frontpage.html
-    └── views
-        ├── frontpage.haml
-        └── shared
-            ├── head.haml
-            └── javascript.haml
+```
+├── Gruntfile.coffee
+├── LICENSE
+├── Package.json
+├── README.md
+├── assets
+│   ├── images
+│   ├── javascript
+│   └── stylesheets
+│       ├── main.scss
+│       └── vendor
+├── dist
+│   ├── assets
+│   │   ├── images
+│   │   └── stylesheets
+│   │       └── main.css
+│   └── frontpage.html
+└── views
+    ├── frontpage.haml
+    └── shared
+        ├── head.haml
+        └── javascript.haml
+```
 
 ## Author
 
