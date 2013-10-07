@@ -47,12 +47,12 @@ module.exports = (grunt) ->
     copy:
       main:
         files: [
-        {
-          expand: true
-          cwd: 'assets/webfonts'
-          src: '**'
-          dest: 'dist/assets/webfonts'
-        }
+          {
+            expand: true
+            cwd: 'assets/webfonts'
+            src: '**'
+            dest: 'dist/assets/webfonts'
+          }
         ]
 
 
